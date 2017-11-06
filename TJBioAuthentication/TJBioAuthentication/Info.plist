@@ -28,6 +28,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>$(PRODUCT_NAME) requires Face ID permission to authenticate using Face recognition.</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
