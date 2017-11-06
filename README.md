@@ -27,19 +27,31 @@
 ## Installation
 
 #### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `TJBioAuthentication` by adding it to your `Podfile`:
 
-```ruby
-platform :ios, '10.0'
-use_frameworks!
-pod 'TJBioAuthentication'
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
 ```
 
-To get the full benefits import `TJBioAuthentication` wherever you import UIKit
 
-``` swift
-import UIKit
-import TJBioAuthentication
+
+To integrate TJBioAuthentication into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'TJBioAuthentication'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
 ```
 
 #### Manually
@@ -47,6 +59,49 @@ import TJBioAuthentication
 2. Congratulations!
 
 
+## Usage
+
+**Note:** - To use faceID you need to add following lines in your info.plist
+```swift
+<key>NSFaceIDUsageDescription</key>
+<string>$(PRODUCT_NAME) requires Face ID permission to authenticate using Face recognition.</string>
+```
+
+### Check biometric authentication is available or not. 
+
+```swift
+if TJBioAuthenticator.shared.isBiometricAuthenticationAvailable(){
+        // Bio metric is available, write your code here
+}
+```
+
+### Check faceID authentication is available or not. 
+
+```swift
+if TJBioAuthenticator.shared.isFaceIDAvailable(){
+      // FaceID is available, write your code here
+}
+```
+
+### Authentication using bioMetric.
+
+```swift
+TJBioAuthenticator.shared.authenticateUserWithBioMetrics(success: {
+            // Biometric Authentication success
+        }) { (error) in
+            // Biometric Authentication unsuccessful
+        }
+```
+
+### Authentication using passcode.
+
+```swift
+TJBioAuthenticator.shared.authenticateUserWithPasscode(success: {
+            // Biometric Authentication success
+        }) { (error) in
+            // Biometric Authentication unsuccessful
+        }
+```
 
 ## Contribute
 
@@ -59,7 +114,7 @@ Tejas Ardeshna – [@tejas_ardeshna](https://twitter.com/tejas_ardeshna) – tej
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-3.2-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: https://github.com/tejas-ardeshna/TJProfileImage/blob/master/LICENSE.md
