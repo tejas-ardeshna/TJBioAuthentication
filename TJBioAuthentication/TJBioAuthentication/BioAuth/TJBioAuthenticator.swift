@@ -95,7 +95,7 @@ public extension TJBioAuthenticator {
     // checks if Face ID is avaiable on device
     public func isFaceIDAvailable() -> Bool {
         if #available(iOS 11.0, *) {
-            return (LAContext().biometryType == .typeFaceID)
+            return (LAContext().biometryType == .faceID)
         }
         return false
     }
