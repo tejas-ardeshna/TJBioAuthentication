@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A988C0D1FE3B95300073DE3 /* TJBioAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A988C0C1FE3B95300073DE3 /* TJBioAuthenticator.swift */; };
 		B854ECEA1FACC5FD006225B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ECE91FACC5FD006225B0 /* AppDelegate.swift */; };
 		B854ECEC1FACC5FD006225B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ECEB1FACC5FD006225B0 /* ViewController.swift */; };
 		B854ECEF1FACC5FD006225B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B854ECED1FACC5FD006225B0 /* Main.storyboard */; };
@@ -15,11 +16,11 @@
 		B854ED031FACC633006225B0 /* alertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ECFC1FACC633006225B0 /* alertHelper.swift */; };
 		B854ED041FACC633006225B0 /* keyBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ECFD1FACC633006225B0 /* keyBoardHelper.swift */; };
 		B854ED0B1FACC65C006225B0 /* TJAuthErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ED081FACC65C006225B0 /* TJAuthErrors.swift */; };
-		B854ED0C1FACC65C006225B0 /* TJBioAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ED091FACC65C006225B0 /* TJBioAuthenticator.swift */; };
 		B854ED0D1FACC65C006225B0 /* TJDefaultMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B854ED0A1FACC65C006225B0 /* TJDefaultMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A988C0C1FE3B95300073DE3 /* TJBioAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TJBioAuthenticator.swift; sourceTree = "<group>"; };
 		B854ECE61FACC5FD006225B0 /* TJBioAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJBioAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B854ECE91FACC5FD006225B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B854ECEB1FACC5FD006225B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		B854ECFC1FACC633006225B0 /* alertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alertHelper.swift; sourceTree = "<group>"; };
 		B854ECFD1FACC633006225B0 /* keyBoardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keyBoardHelper.swift; sourceTree = "<group>"; };
 		B854ED081FACC65C006225B0 /* TJAuthErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJAuthErrors.swift; sourceTree = "<group>"; };
-		B854ED091FACC65C006225B0 /* TJBioAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJBioAuthenticator.swift; sourceTree = "<group>"; };
 		B854ED0A1FACC65C006225B0 /* TJDefaultMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJDefaultMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				B854ED081FACC65C006225B0 /* TJAuthErrors.swift */,
-				B854ED091FACC65C006225B0 /* TJBioAuthenticator.swift */,
 				B854ED0A1FACC65C006225B0 /* TJDefaultMessages.swift */,
+				2A988C0C1FE3B95300073DE3 /* TJBioAuthenticator.swift */,
 			);
 			path = BioAuth;
 			sourceTree = "<group>";
@@ -170,8 +170,8 @@
 				B854ED041FACC633006225B0 /* keyBoardHelper.swift in Sources */,
 				B854ECEC1FACC5FD006225B0 /* ViewController.swift in Sources */,
 				B854ED031FACC633006225B0 /* alertHelper.swift in Sources */,
+				2A988C0D1FE3B95300073DE3 /* TJBioAuthenticator.swift in Sources */,
 				B854ED0B1FACC65C006225B0 /* TJAuthErrors.swift in Sources */,
-				B854ED0C1FACC65C006225B0 /* TJBioAuthenticator.swift in Sources */,
 				B854ECEA1FACC5FD006225B0 /* AppDelegate.swift in Sources */,
 				B854ED0D1FACC65C006225B0 /* TJDefaultMessages.swift in Sources */,
 			);
