@@ -33,14 +33,14 @@ public typealias AuthenticationSuccess = (() -> ())
 // failure block
 public typealias AuthenticationFailure = ((TJAuthErrors) -> ())
 
-open class TJBioAuthenticator: NSObject {
+public class TJBioAuthenticator: NSObject {
 
     struct Static {
         static let instance = TJBioAuthenticator()
     }
     
     // this is the Swift way to do singletons
-    class var shared: TJBioAuthenticator
+    class open var shared: TJBioAuthenticator
     {
        return Static.instance
     }
@@ -95,7 +95,7 @@ public extension TJBioAuthenticator {
     // checks if Face ID is avaiable on device
     public func isFaceIDAvailable() -> Bool {
         if #available(iOS 11.0, *) {
-            return (LAContext().biometryType == .typeFaceID)
+            return (LAContext().biometryType == .faceID)
         }
         return false
     }
