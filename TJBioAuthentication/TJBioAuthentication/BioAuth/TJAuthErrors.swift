@@ -73,7 +73,7 @@ public enum TJAuthErrors {
         case .userFallback:
             return "The user chose to use the fallback."
         case .userCancel:
-            return "The user did cance."
+            return "The user did cancel."
         case .passcodeNotSet:
             return "Passcode is not set on the device."
         case .systemCancel:
