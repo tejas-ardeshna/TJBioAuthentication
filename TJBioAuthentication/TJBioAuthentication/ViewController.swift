@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         TJBioAuthenticator.shared.authenticateUserWithBioMetrics(success: {
             // Biometric Authentication success
-            self.showSucessAlert()
+            self.showSuccessAlert()
         }) { (error) in
             // Biometric Authentication unsuccessful
             switch error{
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     func executePasscodeAuthentication()
     {
         TJBioAuthenticator.shared.authenticateUserWithPasscode(success: {
-            self.showSucessAlert()
+            self.showSuccessAlert()
         }) { (error) in
             self.presentAlert(withTitle: "Error", message: error.getMessage())
         }
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
 
 extension ViewController
 {
-    func showSucessAlert() {
+    func showSuccessAlert() {
         self.presentAlert(withTitle: "Success", message: "Login successful")
     }
 }
