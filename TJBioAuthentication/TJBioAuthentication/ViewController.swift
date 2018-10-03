@@ -55,7 +55,9 @@ class ViewController: UIViewController {
 extension ViewController
 {
     func showSuccessAlert() {
-        self.presentAlert(withTitle: "Success", message: "Login successful")
+        DispatchQueue.main.async {
+            self.presentAlert(withTitle: "Success", message: "Login successful")
+        }
     }
 }
 
