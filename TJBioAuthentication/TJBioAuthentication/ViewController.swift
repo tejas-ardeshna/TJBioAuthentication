@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var btnLoginWithBioMetric: UIButton!
-    @IBOutlet weak var btnLoginWithPassword: UIButton!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var btnPasswordLogin: UIButton!
+    @IBOutlet weak var btnBiometricLogin: UIButton!
     
-    @IBAction func btnBioAuthClicked(_ sender: Any) {
+    @IBAction func btnBiometricLoginClicked(_ sender: Any) {
         
-        TJBioAuthenticator.shared.authenticateUserWithBioMetrics(success: {
+        TJBioAuthenticator.shared.authenticateUserWithBiometrics(success: {
             // Biometric Authentication success
             self.showSuccessAlert()
         }) { (error) in
@@ -30,7 +30,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

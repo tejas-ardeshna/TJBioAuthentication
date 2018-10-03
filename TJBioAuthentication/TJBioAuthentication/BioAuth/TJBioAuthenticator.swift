@@ -62,7 +62,7 @@ public extension TJBioAuthenticator {
     
     
     // Biometric authentication
-    func authenticateUserWithBioMetrics(reason: String = "", fallbackTitle: String? = "", cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure){
+    func authenticateUserWithBiometrics(reason: String = "", fallbackTitle: String? = "", cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure){
         let reasonString = reason.isEmpty ? TJBioAuthenticator.shared.defaultBiometricAuthenticationReason() : reason
         
         let context = LAContext()

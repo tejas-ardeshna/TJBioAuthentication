@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,45 +13,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BioAuth" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TJBioAuthentication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvc-PC-rwU">
-                                <rect key="frame" x="67" y="391" width="241" height="30"/>
-                                <state key="normal" title="Login with biometric authentication"/>
-                                <connections>
-                                    <action selector="btnBioAuthClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCP-8h-hdR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpZ-C7-rAh">
-                                <rect key="frame" x="116.66666666666669" y="321" width="141" height="30"/>
-                                <state key="normal" title="Login with Password"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKr-xl-DaA">
-                                <rect key="frame" x="30" y="251" width="315" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="0HT-Yb-f9G">
+                                <rect key="frame" x="30" y="315" width="315" height="182"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKr-xl-DaA">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpZ-C7-rAh" userLabel="Btn Password Login">
+                                        <rect key="frame" x="89" y="70" width="137" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Password Login"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvc-PC-rwU" userLabel="Btn Biometric Login">
+                                        <rect key="frame" x="89.666666666666686" y="146" width="136" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Biometric Login"/>
+                                        <connections>
+                                            <action selector="btnBiometricLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCP-8h-hdR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CKr-xl-DaA" secondAttribute="trailing" id="AB9-hj-Xxi"/>
+                                    <constraint firstItem="CKr-xl-DaA" firstAttribute="leading" secondItem="0HT-Yb-f9G" secondAttribute="leading" id="AyN-u0-eu3"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CKr-xl-DaA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BmN-wL-KPx"/>
-                            <constraint firstItem="qvc-PC-rwU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cxx-w1-vRW"/>
-                            <constraint firstItem="CKr-xl-DaA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UK3-Zc-EXg"/>
-                            <constraint firstItem="qvc-PC-rwU" firstAttribute="top" secondItem="HpZ-C7-rAh" secondAttribute="bottom" constant="40" id="gY1-wo-Xuf"/>
-                            <constraint firstItem="qvc-PC-rwU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hMK-Z4-pP0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CKr-xl-DaA" secondAttribute="trailing" constant="30" id="oN3-UK-37E"/>
-                            <constraint firstItem="HpZ-C7-rAh" firstAttribute="top" secondItem="CKr-xl-DaA" secondAttribute="bottom" constant="40" id="qvZ-ip-82H"/>
-                            <constraint firstItem="HpZ-C7-rAh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tI0-3j-SUX"/>
+                            <constraint firstItem="0HT-Yb-f9G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8pa-3o-AAf"/>
+                            <constraint firstItem="0HT-Yb-f9G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LXh-5Z-lJu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0HT-Yb-f9G" secondAttribute="trailing" constant="30" id="TUv-3Y-N4P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnLoginWithBioMetric" destination="qvc-PC-rwU" id="hms-a6-MoK"/>
-                        <outlet property="btnLoginWithPassword" destination="HpZ-C7-rAh" id="eur-8x-sJz"/>
+                        <outlet property="btnBiometricLogin" destination="qvc-PC-rwU" id="hms-a6-MoK"/>
+                        <outlet property="btnPasswordLogin" destination="HpZ-C7-rAh" id="eur-8x-sJz"/>
                         <outlet property="txtPassword" destination="CKr-xl-DaA" id="PKF-0T-tlt"/>
                     </connections>
                 </viewController>
