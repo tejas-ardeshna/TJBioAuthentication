@@ -33,7 +33,7 @@ public enum TJAuthErrors {
     
     case appCancel, failed, userCancel, userFallback, systemCancel, passcodeNotSet, biometryNotEnrolled, biometryLockedout, invalidContext , biometryNotAvailable,other
     
-    public static func `init`(error: LAError) -> TJAuthErrors {
+    public static func errorType(_ error: LAError) -> TJAuthErrors {
         switch Int32(error.errorCode) {
             
         case kLAErrorAuthenticationFailed:
