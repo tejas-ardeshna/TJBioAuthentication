@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var btnLoginWithBioMetric: UIButton!
-    @IBOutlet weak var btnLoginWithPassword: UIButton!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var btnPasswordLogin: UIButton!
+    @IBOutlet weak var btnBiometricLogin: UIButton!
     
-    @IBAction func btnBioAuthClicked(_ sender: Any) {
+    @IBAction func btnBiometricLoginClicked(_ sender: Any) {
         
-        TJBioAuthenticator.shared.authenticateUserWithBioMetrics(success: {
+        TJBioAuthenticator.shared.authenticateUserWithBiometrics(success: {
             // Biometric Authentication success
-            self.showSucessAlert()
+            self.showSuccessAlert()
         }) { (error) in
             // Biometric Authentication unsuccessful
             switch error{
@@ -31,21 +31,16 @@ class ViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     func executePasscodeAuthentication()
     {
         TJBioAuthenticator.shared.authenticateUserWithPasscode(success: {
-            self.showSucessAlert()
+            self.showSuccessAlert()
         }) { (error) in
             self.presentAlert(withTitle: "Error", message: error.getMessage())
         }
@@ -54,8 +49,10 @@ class ViewController: UIViewController {
 
 extension ViewController
 {
-    func showSucessAlert() {
-        self.presentAlert(withTitle: "Success", message: "Login successful")
+    func showSuccessAlert() {
+        DispatchQueue.main.async {
+            self.presentAlert(withTitle: "Success", message: "Login successful")
+        }
     }
 }
 
