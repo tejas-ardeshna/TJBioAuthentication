@@ -62,7 +62,7 @@ public extension TJBioAuthenticator {
     
     
     // Biometric authentication
-    func authenticateUserWithBiometrics(reason: String = "", fallbackTitle: String? = "", cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure){
+    func authenticateUserWithBiometrics(reason: String = "", fallbackTitle: String? = "", cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
         let reasonString = reason.isEmpty ? TJBioAuthenticator.shared.defaultBiometricAuthenticationReason() : reason
         
         let context = LAContext()
@@ -117,8 +117,7 @@ extension TJBioAuthenticator {
 }
 
 // MARK:- Get default messages
-extension TJBioAuthenticator
-{
+extension TJBioAuthenticator {
     // get default bio authentication reason
     func defaultBiometricAuthenticationReason() -> String {
         return TJDefaultMessages.defaultReasonMessage.rawValue

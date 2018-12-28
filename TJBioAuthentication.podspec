@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TJBioAuthentication'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Apple biometric authentication for Touch ID and Face ID.'
  
   s.description      = 'Apple biometric authentication for Touch ID and Face ID. Now you can authenticate with Apple Face ID or Touch ID'

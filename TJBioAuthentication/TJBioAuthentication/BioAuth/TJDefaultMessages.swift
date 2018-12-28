@@ -27,8 +27,7 @@
 
 import Foundation
 import UIKit
-enum TJDefaultMessages : String
-{
+enum TJDefaultMessages : String {
     case defaultReasonMessage = "Authentication is needed to access your app."
     case lockoutReasonMessage = "Too many failed attempts."
 }
