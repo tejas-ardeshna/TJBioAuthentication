@@ -71,7 +71,7 @@ public enum TJAuthErrors {
         case .invalidContext:
             return "The context is invalid."
         case .userFallback:
-            return "The user chose to use the fallback."
+            return "The user choose to use the fallback."
         case .userCancel:
             return "The user did cancel."
         case .passcodeNotSet:
